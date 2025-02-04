@@ -27,3 +27,10 @@ The **IntuiTek-MosaicEngine** is an AI-driven system designed to take high-level
    ```bash
    docker-compose up --build
    ```
+   to start the Mosaic-Engine and sample modules.
+4. Run tests with:
+   ```bash
+   pytest tests/
+   ```
+
+Happy building!
