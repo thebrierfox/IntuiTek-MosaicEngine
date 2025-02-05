@@ -1,11 +1,15 @@
-import openai
-import json
 import os
+import json
+import openai
+from dotenv import load_dotenv
 
-# Ensure the API key is set securely
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve the API key securely from the environment
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
-    raise EnvironmentError("OPENAI_API_KEY is not set. Please set it as an environment variable.")
+    raise EnvironmentError("OPENAI_API_KEY is not set. Please set it in your .env file.")
 
 openai.api_key = OPENAI_API_KEY
 
