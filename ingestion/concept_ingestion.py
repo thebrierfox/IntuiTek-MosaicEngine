@@ -15,7 +15,11 @@ def analyze_concept(concept_text):
         ],
         max_tokens=500
     )
-    structured_concept = json.loads(response['choices'][0]['message']['content'])
+    # Robust error checking in case of non-JSON responses
+    try:
+        structured_concept = json.loads(response['choices'][0]['message']['content'])
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Failed to decode LLM response: {e}")
     return structured_concept
 
 if __name__ == "__main__":
@@ -24,4 +28,3 @@ if __name__ == "__main__":
     result = analyze_concept(concept_text)
     with open("output_concept.json", "w") as out:
         json.dump(result, out, indent=4)
-
