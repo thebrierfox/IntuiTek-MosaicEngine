@@ -1,14 +1,14 @@
 modules:
   - name: task_manager
     endpoint: "http://localhost:6001/process"
-    input_schema: 
+    input_schema:
       type: object
       properties:
         task:
           type: "string"
         priority:
           type: "integer"
-    output_schema: 
+    output_schema:
       type: object
       properties:
         status:
@@ -17,14 +17,14 @@ modules:
           type: "string"
   - name: client_crm
     endpoint: "http://localhost:6002/process"
-    input_schema: 
+    input_schema:
       type: object
       properties:
         client_name:
           type: "string"
         contact:
           type: "string"
-    output_schema: 
+    output_schema:
       type: object
       properties:
         status:
