@@ -3,6 +3,7 @@ import requests
 
 def query_open_source_repos(query):
     # Placeholder: In a real implementation, integrate with the GitHub API.
+    # You could add caching here to avoid repeated queries.
     return [
         {"name": "ModuleA", "repo": "https://github.com/example/ModuleA", "score": 0.95},
         {"name": "ModuleB", "repo": "https://github.com/example/ModuleB", "score": 0.85},
@@ -27,4 +28,3 @@ if __name__ == "__main__":
     mapping = map_components(concept)
     with open("module_mapping.json", "w") as out:
         json.dump(mapping, out, indent=4)
-
