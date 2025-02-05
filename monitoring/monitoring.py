@@ -1,4 +1,3 @@
-
 import time
 import logging
 import requests
@@ -28,4 +27,4 @@ if __name__ == "__main__":
     while True:
         result = monitor_all(endpoints)
         logging.info(result)
-        time.sleep(60)  # Run monitoring every minute
+        time.sleep(60)
