@@ -1,1 +1,19 @@
+version: '3.8'
+services:
+  mosaic-engine:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - task_manager
+      - client_crm
 
+  task_manager:
+    image: yourusername/task_manager:latest
+    ports:
+      - "6001:6001"
+
+  client_crm:
+    image: yourusername/client_crm:latest
+    ports:
+      - "6002:6002"
