@@ -1,29 +1,23 @@
+# IntuiTek-MosaicEngine Documentation
 
-# IntuiTek-MosaicEngine
+This document provides an overview of the Mosaic-Engine components:
 
-The **IntuiTek-MosaicEngine** is an AI-driven system designed to take high-level concept blueprints, analyze and break them down into modular components, and then orchestrate the deployment, integration, and continuous monitoring of those modules.
+- **Ingestion:**  
+  Scripts that ingest and analyze concept blueprints using LLMs.
 
-## Key Features
-- **Concept Ingestion:** Uses an LLM to parse natural language blueprints into structured JSON.
-- **Module Mapping:** AI-driven search and selection of open-source or internal modules.
-- **Registry & Integration:** Centralized YAML/JSON registry that defines module endpoints and I/O schemas.
-- **Orchestration:** Containerized deployment via Docker Compose/Kubernetes and CI/CD pipelines.
-- **Monitoring & Self-Healing:** AI-driven logging and performance monitoring with automated adjustments.
-- **Operator Toolbox:** A curated list of web-based resources that Operator leverages to execute tasks.
+- **Mapping:**  
+  AI-driven component mapping that selects the best-fit modules.
 
-## Folder Structure
-- **ingestion/**: Scripts for concept ingestion and analysis.
-- **mapping/**: Code for AI-driven module mapping and evaluation.
-- **registry/**: Component registries in JSON/YAML format.
-- **orchestration/**: Deployment scripts, the central Mosaic-Engine Flask app, Dockerfiles, and CI/CD configurations.
-- **monitoring/**: Monitoring and logging scripts.
-- **toolbox/**: Documentation of external web-based resources.
-- **docs/**: Additional documentation.
-- **tests/**: Automated tests for each component.
+- **Registry:**  
+  YAML/JSON registries defining each module’s interface and dependencies.
 
-## Getting Started
-1. Clone the repository.
-2. Install dependencies in each folder as needed.
-3. In the `orchestration/` folder, run:
-   ```bash
-   docker-compose up --build
+- **Orchestration:**  
+  The central Flask app, Docker deployment configurations, and CI/CD pipelines that integrate all modules.
+
+- **Monitoring:**  
+  Scripts for logging, performance monitoring, and self-healing routines.
+
+- **Toolbox:**  
+  A list of web-based resources and references that Operator uses to complete tasks.
+
+For further details on usage and module-specific documentation, please refer to the respective folders.
